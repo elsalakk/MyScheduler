@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:id="@+id/main_screen">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/app_bar" />
+
+    <ImageButton
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:id="@+id/schedButton"
+        android:background="@drawable/schedule_action"
+
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:onClick="schedule"
+        android:layout_below="@+id/app_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:id="@+id/settingsButton"
+        android:background="@drawable/settings_action"
+        android:layout_marginTop="56dp"
+        android:layout_below="@+id/schedButton"
+        android:layout_alignLeft="@+id/compButton"
+        android:layout_alignStart="@+id/compButton"
+        android:onClick="settings" />
+
+    <ImageButton
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:id="@+id/compButton"
+        android:background="@drawable/competition_action"
+        android:layout_alignTop="@+id/schedButton"
+        android:layout_toRightOf="@+id/schedButton"
+        android:layout_toEndOf="@+id/schedButton"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:onClick="competition" />
+
+    <ImageButton
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:id="@+id/statsButton"
+        android:background="@drawable/stats_action"
+        android:layout_alignTop="@+id/settingsButton"
+        android:layout_alignLeft="@+id/schedButton"
+        android:layout_alignStart="@+id/schedButton"
+        android:onClick="stats" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Schedule"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        android:textColor="#403c3c"
+        android:textStyle="bold"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@+id/schedButton"
+        android:layout_alignLeft="@+id/schedButton"
+        android:layout_alignStart="@+id/schedButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Competition"
+        android:id="@+id/textView2"
+        android:textSize="20sp"
+        android:textColor="#403c3c"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/compButton"
+        android:layout_alignStart="@+id/compButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Setting"
+        android:id="@+id/textView3"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        android:textColor="#403c3c"
+        android:textStyle="bold"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_below="@+id/settingsButton"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Stats"
+        android:id="@+id/textView4"
+        android:textSize="20sp"
+        android:textColor="#403c3c"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+</RelativeLayout>
